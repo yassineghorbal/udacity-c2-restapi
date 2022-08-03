@@ -11,9 +11,11 @@ if (c.aws_profile !== "DEPLOYED") {
   AWS.config.credentials = credentials;
 }
 
+console.log(c.awsKey);
+console.log(c.awsSecret);
 export const s3 = new AWS.S3({
-  accessKeyId: process.env.AWS_ACCESS_KEY,
-  secretAccessKey: process.env.AWS_SECRET_KEY,
+  accessKeyId: c.awsKey,
+  secretAccessKey: c.awsSecret,
   region: c.aws_region,
   params: { Bucket: c.aws_media_bucket },
   signatureVersion: "v4",
