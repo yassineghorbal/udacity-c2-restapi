@@ -1,10 +1,11 @@
 import AWS = require("aws-sdk");
 import { config } from "./config/config";
 
-const c = config.dev;
+const c = config.prod;
 
 //Configure AWS
 if (c.aws_profile !== "DEPLOYED") {
+  const c = config.dev;
   var credentials = new AWS.SharedIniFileCredentials({
     profile: c.aws_profile,
   });
