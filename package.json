@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "./www/server.js",
+  "engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "start": "node .",
     "tsc": "tsc",
