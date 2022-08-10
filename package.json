@@ -2,12 +2,12 @@
   "name": "udacity-c2-restapi",
   "version": "1.0.0",
   "description": "",
-  "main": "./www/server.js",
+  "main": "src/server.js",
   "engines": {
     "node": ">=16"
   },
   "scripts": {
-    "start": "node .",
+    "start": "node ./www/server.js",
     "tsc": "tsc",
     "dev": "ts-node-dev ./src/server.ts",
     "prod": "tsc && node ./www/server.js",
