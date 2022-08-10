@@ -2,15 +2,12 @@
   "name": "udacity-c2-restapi",
   "version": "1.0.0",
   "description": "",
-  "main": "www/server.js",
-  "engines": {
-    "node": ">=16"
-  },
+  "main": "src/server.js",
   "scripts": {
-    "start": "node www/server.js",
+    "start": "node .",
     "tsc": "tsc",
-    "dev": "ts-node-dev src/server.ts",
-    "prod": "tsc && node www/server.js",
+    "dev": "ts-node-dev ./src/server.ts",
+    "prod": "tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && tsc && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
